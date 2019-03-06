@@ -27,4 +27,4 @@ objTracker = tracker(False, logger)  # Currently no idea why this class is neede
 objLoaderVot = loader_vot(args['input'], logger)
 videos = objLoaderVot.get_videos()
 objTrackerVis = tracker_manager(videos, objRegressor, objTracker, logger)
-objTrackerVis.trackAll(0, 1)
+objTrackerVis.trackAll2(0, 1)

@@ -6,6 +6,7 @@
 import math
 import numpy as np
 from ..helper.BoundingBox import BoundingBox
+import cv2
 
 
 def cropPadImage(bbox_tight, image):
@@ -35,6 +36,10 @@ def cropPadImage(bbox_tight, image):
     # import pdb
     # pdb.set_trace()
     # print('debug')
+
+    # cv2.imshow('image', image)
+    # cv2.imshow('cropped image', cropped_image)
+    # cv2.waitKey(0)
 
     # rounding should be done to match the width and height
     output_image[int(edge_spacing_y):int(edge_spacing_y) + cropped_image.shape[0], int(edge_spacing_x):int(edge_spacing_x) + cropped_image.shape[1]] = cropped_image
